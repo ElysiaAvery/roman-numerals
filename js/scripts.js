@@ -17,12 +17,4 @@ function Numeralize(numberIn) {
   return thousands[numArray[3]]+hundos[numArray[2]]+tens[numArray[1]]+ones[numArray[0]];
 }
 
-//UI LOGIC
-$(document).ready(function(){
-  $("form").submit(function(event){
-    var userInput = $("input#natural-number").val();
-    var result = Numeralize(userInput);
-    $("#output").text(result);
-    event.preventDefault();
-  });
-});
+exports.numeralizeModule = Numeralize;
